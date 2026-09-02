@@ -64,6 +64,10 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("GAME OVER");
         Debug.Log("Puntaje final: " + score);
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayGameOver();
+        }
 
         if (finalScoreText != null)
         {

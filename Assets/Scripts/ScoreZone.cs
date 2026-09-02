@@ -7,6 +7,11 @@ public class ScoreZone : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameManager.Instance.AddScore();
+
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayPoint();
+            }
         }
     }
 }

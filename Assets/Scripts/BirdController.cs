@@ -34,6 +34,11 @@ public class BirdController : MonoBehaviour
     private void Jump()
     {
         rb.linearVelocity = new Vector2(0, jumpForce);
+
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayFlap();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
